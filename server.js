@@ -11,10 +11,11 @@ const io = new Server(server, {
       "http://localhost:3000",
       "http://localhost:3001",
       "http://localhost:3002",
-      "https://driver-app-lac.vercel.app",
-      "https://admin-app-psi-five.vercel.app"
+      "https://admin-panel-sage-iota.vercel.app/login",
+      "https://client-app-rouge.vercel.app/dashboard",
+      "https://driver-app-blue.vercel.app/",
     ],
-    methods: ["GET", "POST"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
   },
 });
 
@@ -67,7 +68,7 @@ io.on("connection", (socket) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("WebSocket Server is Running!");
+  res.send("WebSocket Server is Running! (With Updated Cors)");
 });
 
 // Start Server
